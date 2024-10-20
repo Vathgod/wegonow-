@@ -1,0 +1,92 @@
+.card1.show {
+  /* width: 30rem;
+  height: 40rem; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80rem;
+  height: 40rem;
+  gap: 2rem;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  z-index: 5;
+  /* position: absolute; */
+  position: fixed;
+  top: 9rem;
+  background-color: rgba(3, 199, 233, 0.966);
+  transition: all 0.4s ease;
+  transform: translateY(50px);
+}
+.card1.show .des h2 {
+  font-size: 5rem;
+}
+.card1.show .des button {
+  display: block;
+  margin-top: 2rem;
+}
+.card1.show .des p {
+  font-size: 2rem;
+}
+.pi.show {
+  width: 25rem;
+  /* width: 10rem; */
+  border-radius: 10px;
+}
+
+.card1.show .x {
+  display: block;
+  font-size: 1.7rem;
+  margin-bottom: 33rem;
+}
+.card1.show .x:hover {
+  transition: all 0.3s ease;
+  transform: rotate(360deg);
+}
+
+@keyframes blur {
+  0% {
+    /* transform: translateY(-30px); */
+    filter: blur(5px);
+  }
+  100% {
+    /* transform: translateY(0); */
+    filter: blur(0);
+  }
+}
+.card {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 1.5s ease;
+}
+
+.card.visible {
+  opacity: 1;
+}
+.card1 {
+  opacity: 0.1;
+  /* transform: translateY(-30px); */
+  /* transition: all 1s ease; */
+  /* animation: fadeInUp 1s ease forwards; */
+}
+
+.card1.visible {
+  /* opacity: 1; */
+  animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+input::placeholder {
+  color: black; /* Default placeholder color */
+}
+
+input.error::placeholder {
+  color: red; /* Placeholder color when there's an error */
+}
